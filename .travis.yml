@@ -14,6 +14,7 @@ jobs:
       - docker ps
       - docker-compose up
       - ./container_test.sh
+      - docker run -rm -p 3000:3000
       - curl localhost:3000
    - stage: npm-test
      script:
