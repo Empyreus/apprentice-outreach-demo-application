@@ -11,8 +11,8 @@ jobs:
      script: 
       - docker-compose up -d
       - sleep 10
-      - docker ps
       - docker-compose up
+      - docker ps
       - ./container_test.sh
       - docker run -rm -p 3000:3000
       - curl localhost:3000
