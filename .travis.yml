@@ -12,6 +12,7 @@ jobs:
       - docker-compose up -d
       - sleep 20
       - docker ps
+      - docker run backend
       - ./container_test.sh
       - curl localhost:3000
    - stage: npm-test
